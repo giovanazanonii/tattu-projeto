@@ -1,0 +1,144 @@
+.formulario-container {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Poppins', sans-serif;
+}
+
+.formulario-container h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 2rem;
+  color: #064988;
+  font-weight: 700;
+}
+
+.formulario-container p {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #064988;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #2a82d4;
+  box-shadow: 0 0 5px rgba(42, 130, 212, 0.5);
+  outline: none;
+}
+
+/* Input de arquivo */
+.form-group input[type="file"] {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.form-group small {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: #2a82d4;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #17abe3;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+  cursor: pointer;
+}
+
+button.btn {
+  padding: 14px 28px;
+  background-color: #17abe3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.btn:hover:not(:disabled) {
+  background-color: #057ca8;
+  transform: translateY(-2px);
+}
+
+button.btn:disabled {
+  background-color: #a0c0de;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn:hover:enabled {
+  background-color: #057ca8;
+  transform: translateY(-2px);
+}
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* acima de tudo */
+}
+
+/* Caixa do alert */
+.alert-box {
+  background-color: #14ad51;
+  color: white;
+  padding: 24px 32px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  animation: alertFadeIn 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .formulario-container {
+    margin: 40px 20px;
+    padding: 20px;
+  }
+}
+@keyframes alertFadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}

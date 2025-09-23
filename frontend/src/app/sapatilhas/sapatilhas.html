@@ -1,0 +1,22 @@
+<section class="sapatilhas">
+  <div class="container">
+    <h2>Marcas de Sapatilhas</h2>
+
+    <div class="cards">
+      <div class="card" *ngFor="let marca of marcas" (click)="abrirModal(marca)">
+        <img [src]="marca.imagem" [alt]="marca.nome">
+        <p>{{ marca.nome }}</p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-backdrop" *ngIf="marcaSelecionada" (click)="fecharModal()">
+      <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close" (click)="fecharModal()">×</button>
+        <img [src]="marcaSelecionada.imagem" [alt]="marcaSelecionada.nome">
+        <h3>{{ marcaSelecionada.nome }}</h3>
+        <p>{{ marcaSelecionada.descricao }}</p>
+      </div>
+    </div>
+  </div>
+</section>

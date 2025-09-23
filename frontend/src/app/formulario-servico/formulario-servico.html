@@ -1,0 +1,50 @@
+<div class="formulario-container">
+  <h2>Solicitar Serviço</h2>
+  <p>Preencha os campos abaixo para analisarmos seu pedido.</p>
+
+  <form (ngSubmit)="enviarFormulario()" #formServico="ngForm">
+    <div class="form-group">
+      <label for="servico">Tipo de Serviço:</label>
+      <select id="servico" name="servico" required [(ngModel)]="pedido.servico">
+        <option value="" disabled selected>Selecione um serviço</option>
+        <option *ngFor="let s of tiposServico" [value]="s">{{ s }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" placeholder='Nome' name="nome" required [(ngModel)]="pedido.nome">
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" placeholder='E-mail' name="email" required [(ngModel)]="pedido.email">
+    </div>
+
+    <div class="form-group">
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" placeholder="+55 (99) 99999-9999" name="telefone" required [(ngModel)]="pedido.telefone">
+    </div>
+
+
+    <div class="form-group">
+      <label for="fotos">Anexar Fotos:</label>
+      <input type="file" id="fotos" (change)="onFileSelected($event)" multiple>
+      <small *ngIf="pedido.fotos.length">{{ pedido.fotos.length }} arquivo(s) selecionado(s)</small>
+    </div>
+
+    <div class="alert-success" *ngIf="showAlert">
+        Seu serviço foi solicitado com sucesso! Assim que analisarmos sua sapatilha, entraremos em contato.
+    </div>
+
+    <button type="submit" class="btn" [disabled]="!formServico.form.valid">Enviar Pedido</button>
+
+  </form>
+
+    <div class="alert-overlay" *ngIf="showAlert">
+    <div class="alert-box">
+        Seu serviço foi solicitado com sucesso!<br> Assim que analisarmos seu sapato, entraremos em contato.
+    </div>
+    </div>
+
+</div>

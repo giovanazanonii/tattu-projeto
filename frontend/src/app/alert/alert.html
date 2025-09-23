@@ -1,0 +1,6 @@
+<div class="alert-container" *ngIf="message">
+  <div class="alert-box">
+    <span class="alert-message">{{ message }}</span>
+    <button class="close-btn" (click)="closeAlert()">×</button>
+  </div>
+</div>

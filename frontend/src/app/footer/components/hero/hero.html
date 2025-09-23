@@ -1,0 +1,16 @@
+<section class="hero">
+  <div class="hero-slider" [style.transform]="'translateX(-' + index * 100 + '%)'">
+    <div class="slide" *ngFor="let img of imagens">
+      <img [src]="img" alt="Imagem de fundo">
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <h1>Tattu Ressolas</h1>
+    <p>Dê uma nova vida às suas sapatilhas de escalada</p>
+    <div class="hero-buttons">
+      <button class="btn" (click)="goToFormulario()">Solicitar Serviço</button>
+      <a href="https://instagram.com/tatturessolas" target="_blank" class="btn-outline">Ver Trabalhos</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+.footer {
+  padding: 20px 40px;
+  background-color: #064988;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer .socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer .socials a svg {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.footer .socials a:hover svg {
+  transform: scale(1.2);
+}

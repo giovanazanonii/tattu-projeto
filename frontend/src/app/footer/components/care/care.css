@@ -1,0 +1,37 @@
+.care {
+  background-color: #f7f9fc;
+  padding: 60px 20px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.care h2 {
+  color: #064988;
+  margin: 0 0 30px 0;
+}
+
+
+.care-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.care-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+
+.care-list li img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #064988;
+}

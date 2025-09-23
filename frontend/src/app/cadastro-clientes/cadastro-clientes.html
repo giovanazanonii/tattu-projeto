@@ -1,0 +1,59 @@
+<div class="login-container cadastro-horizontal">
+
+  <h2>Cadastro</h2>
+
+  <form>
+    <div class="form-grid">
+      <input type="text" [(ngModel)]="nome" name="nome" placeholder="Nome completo" required>
+      <input type="email" [(ngModel)]="email" name="email" placeholder="E-mail" required>
+      <input type="password" [(ngModel)]="senha" name="senha" placeholder="Senha" required>
+      <input type="password" [(ngModel)]="confirmarSenha" name="confirmarSenha" placeholder="Confirmar senha" required>
+      <input type="text" [(ngModel)]="rua" name="rua" placeholder="Rua" required>
+      <input type="text" [(ngModel)]="numero" name="numero" placeholder="Número" required>
+      <input type="text" [(ngModel)]="bairro" name="bairro" placeholder="Bairro" required>
+      <input type="text" [(ngModel)]="cidade" name="cidade" placeholder="Cidade" required>
+      <select [(ngModel)]="estado" name="estado" required>
+            <option value="" disabled selected>Selecione o estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+        </select>
+
+      <input type="text" [(ngModel)]="cep" name="cep" placeholder="CEP" required>
+      <input type="tel" [(ngModel)]="telefone" name="telefone" placeholder="Telefone" required>
+    </div>
+
+    <button type="button" (click)="onCadastro()">Cadastrar</button>
+  </form>
+
+  <p>{{ mensagem }}</p>
+
+  <p class="cadastro">
+    Já tem conta? 
+    <a routerLink="/login" class="link-cadastro">Faça login</a>
+  </p>
+</div>

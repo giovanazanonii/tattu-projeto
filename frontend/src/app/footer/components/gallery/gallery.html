@@ -1,0 +1,31 @@
+<section class="gallery">
+  <div class="gallery-content">
+    <div class="carousel">
+      <div #track class="carousel-track">
+        <div class="slide">
+          <img src="carrossel/antes1.png" alt="Antes">
+          <img src="carrossel/depois1.png" alt="Depois">
+        </div>
+        <div class="slide">
+          <img src="carrossel/antes2.png" alt="Antes">
+          <img src="carrossel/depois2.png" alt="Depois">
+        </div>
+      </div>
+
+      <!-- Indicadores -->
+      <div class="carousel-dots">
+        <span *ngFor="let slide of slides; let i = index" 
+              [class.active]="i === currentIndex" 
+              (click)="goToSlide(i)"></span>
+      </div>
+    </div>
+
+    <div class="gallery-text">
+      <h2>Por que ressolar minha sapatilha?</h2>
+      <p>Ressolar sua sapatilha é essencial para garantir <strong>durabilidade, conforto e performance</strong> durante a escalada. 
+      Além disso, uma sola bem conservada aumenta a <strong>segurança</strong> nos movimentos, oferecendo melhor aderência e estabilidade em rochas ou paredes artificiais. 
+      Com nossos serviços de ressola completa, meia-sola ou premium, você mantém suas sapatilhas em ótimo estado, evitando a necessidade de comprar um par novo e prolongando a vida útil do seu equipamento favorito.
+      </p>
+    </div>
+  </div>
+</section>

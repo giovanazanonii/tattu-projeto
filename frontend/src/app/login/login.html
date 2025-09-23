@@ -1,0 +1,21 @@
+
+<div class="login-container">
+
+  <img src="logo-site.png" alt="Logo" class="login-logo">
+
+  <h2>Login</h2>
+
+  <form>
+    <input type="email" [(ngModel)]="email" name="email" placeholder="E-mail" required>
+    <input type="password" [(ngModel)]="senha" name="senha" placeholder="Senha" required>
+
+    <button type="button" (click)="onLogin()">Entrar</button>
+  </form>
+
+    <p>{{ mensagem }}</p>
+
+    <p class="cadastro">
+    Não tem conta? 
+    <a routerLink="/cadastro-clientes" class="link-cadastro">Cadastre-se</a>
+    </p>
+</div>

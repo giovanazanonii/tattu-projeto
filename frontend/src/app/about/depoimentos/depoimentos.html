@@ -1,0 +1,18 @@
+<section class="testimonials">
+  <div class="container">
+    <h1>O que nossos clientes dizem</h1>
+    <div class="cards">
+      <div class="card" *ngFor="let testimonial of testimonials">
+        <p class="message">"{{ testimonial.message }}"</p>
+        
+        <div class="rating">
+          <ng-container *ngFor="let star of [1,2,3,4,5]; let i = index">
+            <span class="star" [class.filled]="i < testimonial.rating">&#9733;</span>
+          </ng-container>
+        </div>
+
+        <p class="author">- {{ testimonial.author }}</p>
+      </div>
+    </div>
+  </div>
+</section>

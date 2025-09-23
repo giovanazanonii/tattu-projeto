@@ -1,0 +1,10 @@
+.quem-somos {
+  padding: 20px 20px 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}

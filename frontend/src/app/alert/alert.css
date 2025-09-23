@@ -1,0 +1,44 @@
+.alert-container {
+  position: fixed;
+  top: 20px; /* distância do topo */
+  right: 20px; /* distância da direita */
+  z-index: 2000;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
+
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.alert-box {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  min-width: 250px;
+  max-width: 90vw;
+  pointer-events: auto;
+}
+
+.alert-message {
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateX(50%); }
+  100% { opacity: 1; transform: translateX(0); }
+}
